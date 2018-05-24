@@ -14,7 +14,7 @@ class App extends Component  {
 
     // for stateful components, we must always set the initial state
     this.state = {
-      newField: "",
+      newFieldText: "",
       todoData: [
         { checked: false, text: 'Buy groceries' },
         { checked: true, text: 'Do chores' },
@@ -63,7 +63,7 @@ class App extends Component  {
               // component is controlled by a state machine elsewhere. in this case, the state
               // machine lives inside this component.
               onChange={this.onNewFieldChange}
-              value={this.state.newField}/>
+              value={this.state.newFieldText}/>
           </form>
           {/* below is how we throw in ANY kind of expressions, but not all data types can be rendered
               you can see other strategies for conditional rendering here:
@@ -78,7 +78,7 @@ class App extends Component  {
   // event handler for when the topmost text field's content changes
   onNewFieldChange = (event) => {
     this.setState({
-      newField: event.target.value
+      newFieldText: event.target.value
     })
   }
 
@@ -92,9 +92,14 @@ class App extends Component  {
     // you can read more about it here:
     // https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data
     event.preventDefault();
+    // prevent creating a new todo if the text field is blank
+    if (this.state.newFieldText.length === 0) {
+      return
+    }
+    const newTodoItemText = this.state.newFieldText
     const newTodoItem = {
       checked: false,
-      text: this.state.newText
+      text: newTodoItemText
     }
     // we do not modify state by mutating this.state
     this.setState({
@@ -108,7 +113,7 @@ class App extends Component  {
         newTodoItem,
         ...this.state.todoData,
       ],
-      newField: '' // clear the topmost text field when we have added a new todo item
+      newFieldText: '' // clear the topmost text field when we have added a new todo item
     })
     // remember that in react, we do not mutate variables, in fact you can tell that all
     // of our methods/functions are pure functions
