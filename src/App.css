@@ -1,0 +1,44 @@
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+/* just to make things neat and tidy */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+  padding: 3em;
+}
+
+/* sets panel width to 320 pixels wide */
+.Panel {
+  width: 320px;
+}
+
+.Panel .NewField {
+  /* adds a spacing below the text field at the top */
+  margin-bottom: 24px;
+  /* makes the text field at the top take up full width */
+  width: 100%;
+}
+
+/* adds a spacing below each todo item... */
+.Panel .TodoItem {
+  margin-bottom: 8px;
+}
+
+/* ...unless it is the last todo! */
+.Panel .TodoItem:last-child {
+  margin-bottom: 0px;
+}
+
+/* makes sure the checkbox and the text field of the todo item sits horizontally adjacent */
+.Panel .TodoCheckbox,
+.Panel .TodoField {
+  display: inline;
+}
+
+/* strikes out the text content */
+.strikethrough {
+  text-decoration: line-through;
+}
