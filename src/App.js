@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { InputGroup, Card, Elevation } from '@blueprintjs/core' // the UI library that we are using
 import Center from 'react-center' // component to center our panel
 import TodoItem from './TodoItem' // our custom todo item component
-import "./App.css" // import our customer CSS
+import './App.css' // import our custom CSS
 
 // App is our root component (remember that our UI is structured as a tree).
 // all components must extend from React.Component
