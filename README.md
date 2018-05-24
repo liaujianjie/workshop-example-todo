@@ -17,5 +17,5 @@ src/TodoItem.js
 1. Open a shell terminal and navigate to a folder where you can clone this repository
 2. `git clone git@github.com:liaujianjie/workshop-example-todo.git`
 3. `cd workshop-example-todo`
-4. `yarn install` or `npm install` - (this install all the dependencies)
+4. `yarn install` or `npm install` - (this installs all the dependencies)
 5. `yarn start` or `npm start`
