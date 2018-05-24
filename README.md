@@ -4,7 +4,7 @@
 
 This repo contains the reference source for the React workshop conducted on 24 May 2018 at AXA Singapore.
 
-I have left a lot of comments in these files for your reference:
+I left a lot of comments in these files for your reference:
 
 ```
 src/App.css
