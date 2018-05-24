@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { InputGroup, Card, Elevation } from '@blueprintjs/core' // the UI library that we are using
 import Center from 'react-center' // component to center our panel
 import TodoItem from './TodoItem' // our custom todo item component
-import "./App.css"
+import "./App.css" // import our customer CSS
 
 // App is our root component (remember that our UI is structured as a tree).
 // all components must extend from React.Component
@@ -30,7 +30,7 @@ class App extends Component  {
     // out of the todo data
     const todoItems = this.state.todoData.map((todoData, index) => {
       return <TodoItem
-        // this passes all fields in todoData as props into TodoItem
+        // this passes all fields in todoData as props into TodoItem (similar to spread operator syntax)
         {...todoData}
         // here we create a new arrow function that will call the updateTodoCheck event
         // handler we defined below
